@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Help Desk - Biblioteca de Componentes UI</h1>
+            <p>Patrones visuales para la plataforma de incidencias tecnológicas.</p>
+        </header>
+
+        <section>
+            <h2>1. Botones (Acciones Globales)</h2>
+            <div class="component-group">
+                <button class="btn btn-primary">Guardar Cambios</button>
+                <button class="btn btn-secondary">Cancelar</button>
+                <button class="btn btn-danger">Eliminar Ticket</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Indicadores de Estado (Badges)</h2>
+            <div class="component-group">
+                <span class="badge badge-alta">Prioridad Alta</span>
+                <span class="badge badge-media">Prioridad Media</span>
+                <span class="badge badge-baja">Prioridad Baja</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Control de Formularios</h2>
+            <div class="component-group">
+                <div class="form-group">
+                    <label class="form-label">Título de la Incidencia</label>
+                    <input type="text" class="form-input" placeholder="Ej. Error de autenticación LDAP...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Categoría del Incidente</label>
+                    <select class="form-select">
+                        <option value="">Seleccione una categoría...</option>
+                        <option value="hw">Hardware de Red</option>
+                        <option value="sw">Software Base</option>
+                        <option value="net">Seguridad Informática</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Contenedor de Información (Ticket Card)</h2>
+            <div class="component-group">
+                <div class="card-ticket">
+                    <div class="card-header">
+                        <span class="card-id">INCIDENTE #1024</span>
+                        <span class="badge badge-alta">Alta</span>
+                    </div>
+                    <h3 class="card-title">Fallo Crítico en Switch Principal</h3>
+                    <p class="card-body">
+                        El dispositivo core del área de servidores no responde. Los equipos de desarrollo reportan desconexión total a bases de datos corporativas.
+                    </p>
+                    <button class="btn btn-primary" style="width: 100%;">Asignar a mi Bandeja</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

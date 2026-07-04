@@ -1,0 +1,255 @@
+/* ==========================================
+   1. VARIABLES GLOBALES Y CONFIGURACIÓN (:root)
+   ========================================== */
+:root {
+    --primary: #261bfd;           
+    --primary-hover: #342e77;
+    --secondary: #a5b1e7;         
+    --secondary-hover: #3b445c;
+    
+    --success: #10b981;           
+    --warning: #f59e0b;           
+    --danger: #ef4444;            
+    --danger-hover: #500606;
+
+    --bg-app: #f8fafc;            
+    --bg-card: #ffffff;
+    --text-main: #0f172a;         
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;       
+    
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+    
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.04);
+    
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    line-height: 1.5;
+    padding: 50px 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   2. ESTRUCTURA DE BLOQUES (LAYOUT)
+   ========================================== */
+header {
+    background-color: var(--bg-card);
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 35px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary);
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 22px;
+}
+
+.component-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ==========================================
+   3. COMPONENTES UI (ORDENADOS)
+   ========================================== */
+
+/* --- BOTONES --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: white;
+    border-color: var(--border-color);
+    color: var(--secondary-hover);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-app);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-hover);
+}
+
+/* --- BADGES (ALERTAS) --- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+}
+
+.badge-alta {
+    background-color: #fef2f2;
+    color: #b91c1c;
+}
+
+.badge-media {
+    background-color: #fffbeb;
+    color: #b45309;
+}
+
+.badge-baja {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+
+/* --- FORMULARIOS --- */
+.form-group {
+    flex: 1;
+    min-width: 260px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: white;
+    transition: var(--transition-smooth);
+}
+
+.form-input:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* --- TARJETA DE TICKET --- */
+.card-ticket {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 24px;
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+}
+
+.card-ticket:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-id {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    background-color: rgba(79, 70, 229, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-body {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+}
