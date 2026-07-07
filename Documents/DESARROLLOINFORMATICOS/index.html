@@ -3,71 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design System - Help Desk</title>
+    <title>Help Desk - Dashboard Principal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Help Desk - Biblioteca de Componentes UI</h1>
-            <p>Patrones visuales para la plataforma de incidencias tecnológicas.</p>
-        </header>
+    <!-- CABECERA PRINCIPAL -->
+    <header>
+        <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+        <p>Data Center & Infraestructura de Red</p>
+    </header>
 
-        <section>
-            <h2>1. Botones (Acciones Globales)</h2>
-            <div class="component-group">
-                <button class="btn btn-primary">Guardar Cambios</button>
-                <button class="btn btn-secondary">Cancelar</button>
-                <button class="btn btn-danger">Eliminar Ticket</button>
-            </div>
+    <!-- BARRA DE NAVEGACIÓN COMPLETA -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Inicio</strong></a></li>
+            <li><a href="reportar.html">Reportar Incidente</a></li>
+            <li><a href="tickets.html">Ver Tickets</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO DEL DASHBOARD -->
+    <main>
+        <section class="section-card">
+            <h2>Bienvenido al Dashboard del Sistema</h2>
+            <p>Este sistema automatiza la gestión y resolución de fallos de hardware y redes para garantizar la alta disponibilidad del Data Center.</p>
         </section>
 
-        <section>
-            <h2>2. Indicadores de Estado (Badges)</h2>
-            <div class="component-group">
-                <span class="badge badge-alta">Prioridad Alta</span>
-                <span class="badge badge-media">Prioridad Media</span>
-                <span class="badge badge-baja">Prioridad Baja</span>
+        <section class="section-card">
+            <h2>Resumen de Roles Operativos</h2>
+            <div class="grid-roles">
+                <article class="role-card">
+                    <h3>Usuarios Finales</h3>
+                    <p>Reportan las incidencias técnicas de conectividad o componentes físicos.</p>
+                </article>
+                <article class="role-card">
+                    <h3>Técnicos Especialistas</h3>
+                    <p>Reciben alertas en tiempo real y gestionan el estado de los tickets asignados.</p>
+                </article>
+                <article class="role-card">
+                    <h3>Administradores</h3>
+                    <p>Supervisan las métricas generales de rendimiento y el catálogo técnico.</p>
+                </article>
             </div>
         </section>
+    </main>
 
-        <section>
-            <h2>3. Control de Formularios</h2>
-            <div class="component-group">
-                <div class="form-group">
-                    <label class="form-label">Título de la Incidencia</label>
-                    <input type="text" class="form-input" placeholder="Ej. Error de autenticación LDAP...">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Categoría del Incidente</label>
-                    <select class="form-select">
-                        <option value="">Seleccione una categoría...</option>
-                        <option value="hw">Hardware de Red</option>
-                        <option value="sw">Software Base</option>
-                        <option value="net">Seguridad Informática</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>4. Contenedor de Información (Ticket Card)</h2>
-            <div class="component-group">
-                <div class="card-ticket">
-                    <div class="card-header">
-                        <span class="card-id">INCIDENTE #1024</span>
-                        <span class="badge badge-alta">Alta</span>
-                    </div>
-                    <h3 class="card-title">Fallo Crítico en Switch Principal</h3>
-                    <p class="card-body">
-                        El dispositivo core del área de servidores no responde. Los equipos de desarrollo reportan desconexión total a bases de datos corporativas.
-                    </p>
-                    <button class="btn btn-primary" style="width: 100%;">Asignar a mi Bandeja</button>
-                </div>
-            </div>
-        </section>
-    </div>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 - Desarrollado por: Holger Jandri Navarro García</p>
+        <p>Universidad Técnica de Manabí - Quinto Semestre (Paralelo A)</p>
+    </footer>
 
 </body>
 </html>
