@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Reportar Incidente</title>
+    <!-- ESTA LÍNEA ES LA QUE ACTIVA TODO EL DISEÑO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL -->
+    <header>
+        <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+        <p>Formulario de Registro Técnico</p>
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html"><strong>Reportar Incidente</strong></a></li>
+            <li><a href="tickets.html">Ver Tickets</a></li>
+        </ul>
+    </nav>
+
+    <!-- FORMULARIO ESTILIZADO -->
+    <main>
+        <section class="section-card">
+            <h2>Registrar Nuevo Incidente</h2>
+            <p style="margin-bottom: 20px;">Por favor, complete todos los campos detallando el inconveniente técnico.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="titulo">Título del Incidente:</label>
+                    <input type="text" id="titulo" class="input-control" required placeholder="Ej. Falla de conexión en rack principal">
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoría del Fallo:</label>
+                    <select id="categoria" class="select-control" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="red">Red</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nivel de Prioridad:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="prioridad" value="alta" required> Alta</label>
+                        <label><input type="radio" name="prioridad" value="media"> Media</label>
+                        <label><input type="radio" name="prioridad" value="baja"> Baja</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción Detallada:</label>
+                    <textarea id="descripcion" class="textarea-control" rows="5" required placeholder="Describa el comportamiento del fallo..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar ticket de Incidente</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 - Desarrollado por: Holger Jandri Navarro García</p>
+        <p>Universidad Técnica de Manabí - Quinto Semestre (Paralelo A)</p>
+    </footer>
+
+</body>
+</html>

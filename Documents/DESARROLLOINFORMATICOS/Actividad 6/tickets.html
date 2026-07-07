@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Historial de Tickets</title>
+    <!-- ESTA LÍNEA ES LA QUE ACTIVA TODO EL DISEÑO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL -->
+    <header>
+        <h1>Sistema de Gestión de Incidentes (Help Desk)</h1>
+        <p>Consola de Monitoreo de Tickets</p>
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar Incidente</a></li>
+            <li><a href="tickets.html"><strong>Ver Tickets</strong></a></li>
+        </ul>
+    </nav>
+
+    <!-- TABLA DE TICKETS RESPONSIVA -->
+    <main>
+        <section class="section-card">
+            <h2>Listado General de Incidentes Registrados</h2>
+            <p style="margin-bottom: 20px;">A continuación se muestran los incidentes reportados en la infraestructura del Data Center:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Ticket</th>
+                            <th>Título del Incidente</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado Actual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TK-001</td>
+                            <td>Caída del switch troncal VLAN 10</td>
+                            <td>Red</td>
+                            <td><span class="badge badge-alta">Alta</span></td>
+                            <td>Asignado (Técnico Observer)</td>
+                        </tr>
+                        <tr>
+                            <td>TK-002</td>
+                            <td>Fallo en la fuente de poder del Servidor BD</td>
+                            <td>Hardware</td>
+                            <td><span class="badge badge-alta">Alta</span></td>
+                            <td>Abierto</td>
+                        </tr>
+                        <tr>
+                            <td>TK-003</td>
+                            <td>Lentitud en la sincronización de metadatos</td>
+                            <td>Software</td>
+                            <td><span class="badge badge-media">Media</span></td>
+                            <td>Resuelto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 - Desarrollado por: Holger Jandri Navarro García</p>
+        <p>Universidad Técnica de Manabí - Quinto Semestre (Paralelo A)</p>
+    </footer>
+
+</body>
+</html>
