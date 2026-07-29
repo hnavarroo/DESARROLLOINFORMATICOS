@@ -25,17 +25,15 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { titulo, descripcion, categoria, prioridad, estado } = req.body;
+  const { titulo, descripcion, estado } = req.body;
   try {
     const result = await pool.query(
-      `INSERT INTO tickets (titulo, descripcion, categoria, prioridad, estado)
-       VALUES ($1, $2, $3, $4, $5) RETURNING *`,
+      `INSERT INTO tickets (titulo, descripcion, estado)
+       VALUES ($1, $2, $3) RETURNING *`,
       [
         titulo, 
         descripcion, 
-        categoria || 'General', 
-        prioridad || 'Media', 
-        estado || 'pendiente'
+        estado || 'Abierto'
       ]
     );
     res.status(201).json(result.rows[0]);
