@@ -30,10 +30,17 @@ router.post('/', async (req, res) => {
     const result = await pool.query(
       `INSERT INTO tickets (titulo, descripcion, categoria, prioridad, estado)
        VALUES ($1, $2, $3, $4, $5) RETURNING *`,
-      [titulo, descripcion, categoria, prioridad, estado || 'Abierto']
+      [
+        titulo, 
+        descripcion, 
+        categoria || 'General', 
+        prioridad || 'Media', 
+        estado || 'pendiente'
+      ]
     );
     res.status(201).json(result.rows[0]);
   } catch (error) {
+    console.error('ERROR EN POST /tickets:', error);
     res.status(500).json({ error: error.message });
   }
 });
