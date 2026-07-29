@@ -1,5 +1,4 @@
-// URL de tu API (Cámbiala cuando despliegues en la nube)
-const API_URL = 'http://localhost:3000/tickets';
+const API_URL = '/tickets';
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarTickets();
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', guardarTicket);
 });
 
-// Función para obtener e imprimir todos los tickets
 async function cargarTickets() {
     try {
         const res = await fetch(API_URL);
@@ -39,7 +37,6 @@ async function cargarTickets() {
             tableBody.appendChild(tr);
         });
 
-        // Actualizar métricas del Dashboard
         document.getElementById('total-tickets').textContent = tickets.length;
         document.getElementById('pending-tickets').textContent = pendientes;
         document.getElementById('process-tickets').textContent = enProceso;
@@ -49,7 +46,6 @@ async function cargarTickets() {
     }
 }
 
-// Función para guardar un ticket
 async function guardarTicket(e) {
     e.preventDefault();
 
@@ -72,8 +68,6 @@ async function guardarTicket(e) {
         console.error('Error al crear ticket:', error);
     }
 }
-
-// Función para eliminar un ticket
 async function eliminarTicket(id) {
     if (!confirm('¿Estás seguro de eliminar este ticket?')) return;
 
