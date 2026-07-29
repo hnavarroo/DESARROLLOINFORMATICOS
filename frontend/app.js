@@ -1,4 +1,4 @@
-const API_URL = '/tickets';
+const API_URL = '/tickets'; // API URL para producción
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarTickets();
